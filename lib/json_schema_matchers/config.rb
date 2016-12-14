@@ -10,7 +10,7 @@ module JsonSchemaMatchers
   end
 
   class Config
-    DEFAULT_SCHEMA_ROOT = "#{Dir.pwd}spec/json_schemas".freeze
+    DEFAULT_SCHEMA_ROOT = "#{Dir.pwd}/spec/json_schemas".freeze
     DEFAULT_OPTIONS = {version: :draft4,
                        insert_defaults: true,
                        validate_schema: true}
