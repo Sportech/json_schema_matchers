@@ -1,4 +1,4 @@
-/.bundle/
+/.idea/
 /.yardoc
 /Gemfile.lock
 /_yardoc/
@@ -12,3 +12,4 @@
 *.o
 *.a
 mkmf.log
+/vendor/bundle/
