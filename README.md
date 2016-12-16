@@ -8,7 +8,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 group :test do
-  gem 'json_schema_matchers', '~> 0.0.1', github: 'Sportech/json_schema_matchers'
+  gem 'json_schema_matchers', '~> 0.0.1', git: 'git@github.com:Sportech/json_schema_matchers.git'
 end
 ```
 
@@ -88,7 +88,7 @@ it {
 
 ## Configuration
 
-Default `schema_root` is `"#{Dir.pwd}spec/json_schemas"`
+Default `schema_root` is `"#{Dir.pwd}/spec/json_schemas"`
 
 Default custom options
 
@@ -103,7 +103,7 @@ Options can be added or overrided usning `JsonSchemaMatchers.configure`
 ```ruby
 JsonSchemaMatchers.configure do |config|
   config.schema_root = "#{Rails.root}/spec/fixtures/json_schemas"
-  config.option[:strict] = true
+  config.options[:strict] = true
 end
 ```
 
