@@ -20,11 +20,8 @@ if RSpec.respond_to?(:configure)
   end
 
   RSpec.shared_examples 'a successful request' do |schema|
-    it 'returns an OK (200) status code' do
-      expect(last_response.status).to eq(200)
-    end
-
     it 'response match JSON schema' do
+      expect(last_response.status).to eq(200)
       expect(last_response.body).to match_response_schema(schema)
     end
   end

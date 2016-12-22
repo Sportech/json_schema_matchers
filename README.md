@@ -8,7 +8,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 group :test do
-  gem 'json_schema_matchers', '~> 0.0.1', git: 'git@github.com:Sportech/json_schema_matchers.git'
+  gem 'json_schema_matchers', git: 'git@github.com:Sportech/json_schema_matchers.git', tag: 'v0.0.1'
 end
 ```
 
@@ -84,6 +84,16 @@ it {
   expect(last_response.status).to eq(200)
   expect(last_response.body).to match_response_schema('products/index')
 }
+```
+
+Or use shared example
+
+```ruby
+# spec/contract/example_spec.rb
+
+before { get '/product' }
+
+it_behaves_like 'a successful request', 'products/index'
 ```
 
 ## Configuration
