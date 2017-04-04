@@ -23,5 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "pry", "~> 0.10.4"
   spec.add_development_dependency "rspec", "~> 3.5.0"
 
-  spec.add_dependency "json-schema", "~> 2.7.0"
+  spec.add_dependency "json-schema", "~> 2.8.0"
 end
